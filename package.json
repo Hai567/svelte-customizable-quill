@@ -10,7 +10,8 @@
         "quilljs",
         "editor",
         "richtext",
-        "richtext editor"
+        "richtext editor",
+        "svelte quill"
     ],
     "scripts": {
         "dev": "vite dev",
