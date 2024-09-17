@@ -1,10 +1,10 @@
 <script>
-    let { options = {}, data = "", class: class_attr } = $$restProps
+    let { Quill, options = {}, data = "", class: class_attr } = $$restProps
 
     function init(node) {
         let off
         import("./quill.js").then(({ quill }) => {
-            off = quill(node, data, {
+            off = quill(Quill, node, data, {
                 theme: "snow",
                 ...options,
             })
