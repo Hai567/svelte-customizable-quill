@@ -1,6 +1,17 @@
 {
-    "name": "svelte-customizable-quill",
+    "name": "@canadies/svelte-customizable-quill",
     "version": "1.0.1",
+    "description": "An easy to use and flexible quill editor for Svelte",
+    "author": "Daniel Ho (https://github.com/Hai567)",
+    "license": "MIT",
+    "keywords": [
+        "svelte",
+        "quill",
+        "quilljs",
+        "editor",
+        "richtext",
+        "richtext editor"
+    ],
     "scripts": {
         "dev": "vite dev",
         "build": "vite build && npm run package",
