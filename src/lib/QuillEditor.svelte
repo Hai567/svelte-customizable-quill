@@ -18,5 +18,5 @@
 </script>
 
 <div {...class_attr ? { class: class_attr } : {}}>
-    <div use:init on:text-change></div>
+    <div use:init on:typing></div>
 </div>

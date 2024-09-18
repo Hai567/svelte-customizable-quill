@@ -1,3 +1,38 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import QuillEditor from "$lib/QuillEditor.svelte"
+    import { onMount } from "svelte"
+    let data = "asdfasdf"
+    let Quill
+    let quillOptions = {
+        theme: "snow",
+    }
+    let quillReady = false
+
+    const typingEvent = (event) => {
+        const { text, html } = event?.detail ?? {}
+        data = html
+    }
+
+    onMount(async () => {
+        const quillModule = await import("quill")
+        Quill = quillModule.default
+        quillReady = true // Set the flag when Quill is ready
+    })
+</script>
+
+<svelte:head>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/quill@2.0.2/dist/quill.snow.css"
+        crossorigin
+    />
+</svelte:head>
+{#if quillReady}
+    <h1>Hello</h1>
+    <QuillEditor
+        {Quill}
+        options={quillOptions}
+        {data}
+        on:typing={typingEvent}
+    />
+{/if}

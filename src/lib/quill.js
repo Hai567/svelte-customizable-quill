@@ -1,8 +1,6 @@
-// import Quill from "quill"
-export let Quill
 import { Delta } from "quill/core.js"
 
-export function quill(node, data, options) {
+export function quill(Quill, node, data, options) {
     const { plainclipboard = false, ...remainedOptions } = options
 
     const toolbar = [
@@ -16,9 +14,6 @@ export function quill(node, data, options) {
     const q = new Quill(node, {
         modules: {
             toolbar,
-            resize: {
-                locale: {},
-            },
         },
         placeholder: "Type here...",
         ...remainedOptions,

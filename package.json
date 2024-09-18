@@ -1,6 +1,6 @@
 {
     "name": "@canadies/svelte-customizable-quill",
-    "version": "1.0.2",
+    "version": "1.0.5",
     "description": "An easy to use and flexible quill editor for Svelte",
     "author": "Daniel Ho (https://github.com/Hai567)",
     "license": "MIT",
@@ -49,5 +49,8 @@
     },
     "svelte": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "quill": "^2.0.2"
+    }
 }
